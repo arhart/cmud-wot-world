@@ -1,5 +1,5 @@
 package.path = '../src/?.lua;src/?.lua;' .. package.path;
-local world = require("world");
+local world = require('utils');
 
 local lastSend;
 local lastEcho;

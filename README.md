@@ -8,10 +8,15 @@ Lua-based application core for use with cmud on wotmud.
 ## Development
 All development is done outside of cmud to enable unit testing. To perform development you must:
 - Install lua 5.1: http://www.lua.org/download.html
-- Install busted: http://olivinelabs.com/busted/
+- Install luarocks for dependancy package management: 
 - Checkout code from GitHub!
 
-Now open a terminal window and change to the local directory the code is checked out into. To run the test you:
+Now open a terminal window and change to the local directory the code is checked out into. 
+**Initial Depedancies Install**
+> luarocks install lustache
+> luarocks install busted
+
+To run the test you:
 > busted test/worldTest.lua
 
 ## Design
@@ -20,3 +25,4 @@ The general idea behind this application is to provide common handling of wotmud
 ### Random Thoughts
 - Need to establish a deployment mechanism for the cmud scripts that includes the lua code. Perhaps a simple xml template and a map on how to assemble.
 - Need to decide on a communication style. Promises, events, or passing anon functions...   ...perhaps events on object changes along with anon functions...
+- General Systems: positioning, targeting.
